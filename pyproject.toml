@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognex-eip"
+version = "0.1.0"
+description = "Monitor and control Cognex Class 1 EtherNet/IP I/O"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.gui-scripts]
+cognex-eip = "cognex_eip.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
