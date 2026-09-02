@@ -12,24 +12,25 @@ inspection, output controls, and configurable packed PLC data layouts.
 
 ## Setup
 
-Clone the repository, enter its directory, and create a virtual environment:
+Clone the repository and enter its directory:
 
 ```powershell
-git clone <repository-url>
+git clone https://github.com/foxrid3r/cognex_eip.git
 cd cognex_eip
+```
+
+Create a virtual environment and install the application into it:
+
+```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
+python -m pip install .
 ```
 
-Install the application in editable mode:
-
-```powershell
-python -m pip install --editable .
-```
-
-Editable installation keeps the command connected to the source checkout, so
-code changes take effect without reinstalling the project. No third-party
-runtime packages are currently required.
+This performs a normal installation. Users can run the application without
+editing the source code, and changes to files in the repository will not alter
+the installed application. No third-party runtime packages are currently
+required.
 
 ## Usage
 
@@ -50,6 +51,17 @@ Enter the camera IP address and requested packet interval, then select
 JSON files for reuse.
 
 ## Development
+
+Contributors who intend to change the source should install the application in
+editable mode:
+
+```powershell
+.venv\Scripts\Activate.ps1
+python -m pip install --editable .
+```
+
+Editable installation makes source changes available without reinstalling the
+application.
 
 Run the standard-library test suite from the repository root:
 
